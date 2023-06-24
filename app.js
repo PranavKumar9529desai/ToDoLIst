@@ -5,13 +5,15 @@ const  bodyparser = require ('body-parser');
 const mongoose = require('mongoose');
 app.set('view engine' , "ejs");
 app.use(express.static("public"));
+const env = require ('dotenv').config ()
+
 
 
 app.use(bodyparser.urlencoded({extended:true}));
 
 
        // section mongoose
-mongoose.connect('mongodb://127.0.0.1:27017/ToDoListDB');
+mongoose.connect(process.env.connection_string);
 
        //creating Schema
 const itemsSchema = new mongoose.Schema({
