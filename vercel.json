@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "ToDoList",
+    "name": "index.js",
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
