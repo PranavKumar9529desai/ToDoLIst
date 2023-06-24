@@ -129,15 +129,4 @@ app.get("/", async function (req, res) {
 });
  
 
-
-
- 
-
- 
-
- 
-app.listen(4000, function () {
-    console.log("The app is running on the port 4000");
-    
-});
-
+app.listen (process.env.PORT || 4000, function () {  console.log ('The app is running on the port 4000');  });
